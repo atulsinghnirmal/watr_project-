@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Water Network Data Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-section">
+    <div class="map-container">
+      <img src="Map.jpg" alt="Map" class="map-image"/>
+    </div>
+    <div class="button-panel">
+      <button onclick="loadSheet('block data')">Block Data</button>
+      <button onclick="loadSheet('pipe data')">Pipe Data</button>
+      <button onclick="loadSheet('major junctions data')">Major Junctions Data</button>
+      <button onclick="loadSheet('pump data')">Pump Data</button>
+      <button onclick="loadSheet('reservoir data')">Reservoir Data</button>
+      <input type="file" id="upload" accept=".xlsx,.xls" />
+    </div>
+  </div>
+
+  <div class="bottom-section">
+    <div id="table-container"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
